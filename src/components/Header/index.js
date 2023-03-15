@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         paddingBottom: 44,
     },
     content: {
-        flex:1, //pagar o tqmanho da tela toda 
+        flex:1, //pegar o tamanho da tela toda 
         alignItems: "center", // alinhar na horizontal 
         flexDirection: "row", 
         justifyContent: "space-between", // alinhar na vertical 
