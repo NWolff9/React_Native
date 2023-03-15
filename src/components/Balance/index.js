@@ -1,24 +1,24 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-export default function Balance(){
+export default function Balance({saldo, gastos}){
     return(
         <View style={styles.container}>
             {/* Saldo */}
             <View style={styles.item}>
-                <Text style={styles.itemTitle}>Saldo</Text> 
-                <View>
+                <Text style={styles.itemSaldo}>Saldo</Text> 
+                <View style={styles.content}>
                     <Text style={styles.currencySymbol}>R$</Text>
-                    <Text style={styles.balance}>15.000,00</Text>
+                    <Text style={styles.balance}>{saldo}</Text>
                 </View>
             </View>
 
             {/* Gastos */}
             <View style={styles.item}>
-                <Text style={styles.itemTitle}>Gastos</Text> 
-                <View>
+                <Text style={styles.itemGasto}>Gastos</Text> 
+                <View style={styles.content}>
                     <Text style={styles.currencySymbol}>R$</Text>
-                    <Text style={styles.balance}>10,00</Text>
+                    <Text style={styles.balance}>{gastos}</Text>
                 </View>
             </View>
         </View>
@@ -27,7 +27,7 @@ export default function Balance(){
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: "#3a86ff",
+        backgroundColor: "#fff",
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingStart: 18,
@@ -40,5 +40,25 @@ const styles = StyleSheet.create({
         paddingBottom: 22,
         // nada sobrepoe o container
         zIndex: 99
-    }
+    },
+
+    itemSaldo:{
+        fontSize: 20,
+        color:"#70e000" 
+    },
+
+    itemGasto:{
+        fontSize: 20,
+        color:"#ef233c"
+    },
+
+    content:{
+        flexDirection:'row',
+        alignItems: 'center'
+    },
+    currencySymbol:{
+        color:"#000000",
+        marginRight:6 
+    },
+    
 })
