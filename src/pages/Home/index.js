@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 import Header from '../../components/Header';
 import Balance from '../../components/Balance';
+import Moviments from '../../components/Movements';
 
 //Lista de movimentações na conta
 
@@ -49,7 +50,7 @@ export default function Home() {
                 // nao ter a barra de rolagem
                 showsVerticalScrollIndicator={false}
                 // renderizar os itens como componentes
-                renderItem={({item}) => <Text>{item.label}</Text>}
+                renderItem={({item}) => <Moviments data={item}/>}
                 />
         </View>
     );
@@ -58,15 +59,17 @@ export default function Home() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#adb5bd',
+        backgroundColor: '#e9ecef',
     },
 
     title: {
+        alignSelf: 'center',
         fontSize: 16,
         fontWeight: 'bold',
         marginLeft: 14,
         marginRight: 14,
         marginTop: 14,
+        marginBottom: 14,
     },
 
     list:{
