@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, FlatList } from 'react-native';
 import Header from '../../components/Header';
 import Balance from '../../components/Balance';
 import Moviments from '../../components/Movements';
+import Actions from '../../components/Actions';
 
 //Lista de movimentações na conta
 
@@ -38,6 +39,8 @@ export default function Home() {
             <Header name = "Nathã"/>
             
             <Balance saldo ="2000" gastos ="500"/>
+
+            <Actions/>
             
             <Text style={styles.title}>Últimas movimentações</Text>
 
