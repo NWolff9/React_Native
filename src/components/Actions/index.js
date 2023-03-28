@@ -4,7 +4,7 @@ import {AntDesign} from '@expo/vector-icons'
 
 export default function Actions(){
     return(
-        <ScrollView style={styles.container} horizontal={true} showsHorizontalScrollIndicator={false}>
+        <View style={styles.container}>
             <TouchableOpacity style={styles.actionButton}>
                 <View style={styles.areaButton}>
                     <AntDesign name='addfolder' size={26} color="#000"/>
@@ -19,28 +19,9 @@ export default function Actions(){
                 <Text style={styles.labelButton}>Compras</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.actionButton}>
-                <View style={styles.areaButton}>
-                    <AntDesign name='barcode' size={26} color="#000"/>
-                </View>
-                <Text style={styles.labelButton}>Boletos</Text>
-            </TouchableOpacity>
+           
 
-            <TouchableOpacity style={styles.actionButton}>
-                <View style={styles.areaButton}>
-                    <AntDesign name='setting' size={26} color="#000"/>
-                </View>
-                <Text style={styles.labelButton}>Contas</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity style={styles.actionButton}>
-                <View style={styles.areaButton}>
-                    <AntDesign name='addfolder' size={26} color="#000"/>
-                </View>
-                <Text style={styles.labelButton}>Entrada</Text>
-            </TouchableOpacity>
-
-        </ScrollView>
+        </View>
         
     );
 }
@@ -52,6 +33,10 @@ const styles = StyleSheet.create({
         marginTop: 18,
         paddingEnd: 14,
         paddingStart: 14,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginStart: 50,
+        marginEnd: 50,
     },
 
     actionButton:{
