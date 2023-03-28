@@ -1,33 +1,39 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity, ScrollView} from 'react-native';
-import {AntDesign} from '@expo/vector-icons'
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { AntDesign } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native';
 
-export default function Actions(){
-    return(
+
+
+export default function Actions() {
+
+    const navigation = useNavigation();
+    return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.actionButton}>
+            {/* <a href='https://expo.github.io/router/docs/'></a> */}
+            <TouchableOpacity style={styles.actionButton} onPress={()=>navigation.navigate('Perfil')} >
                 <View style={styles.areaButton}>
-                    <AntDesign name='addfolder' size={26} color="#000"/>
+                    <AntDesign name='addfolder' size={26} color="#000" />
                 </View>
                 <Text style={styles.labelButton}>Entrada</Text>
             </TouchableOpacity>
 
+
+
             <TouchableOpacity style={styles.actionButton}>
                 <View style={styles.areaButton}>
-                    <AntDesign name='tagso' size={26} color="#000"/>
+                    <AntDesign name='tagso' size={26} color="#000" />
                 </View>
                 <Text style={styles.labelButton}>Compras</Text>
             </TouchableOpacity>
 
-           
-
         </View>
-        
+
     );
 }
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
         maxHeight: 84,
         marginBottom: 14,
         marginTop: 18,
@@ -39,12 +45,12 @@ const styles = StyleSheet.create({
         marginEnd: 50,
     },
 
-    actionButton:{
+    actionButton: {
         alignItems: 'center',
         marginRight: 32,
     },
 
-    areaButton:{
+    areaButton: {
         backgroundColor: '#dada',
         width: 60,
         height: 60,
@@ -53,7 +59,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
 
-    labelButton:{
+    labelButton: {
         fontWeight: 'bold',
         marginTop: 4,
         textAlign: 'center',

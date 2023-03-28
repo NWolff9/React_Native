@@ -4,6 +4,7 @@ import Balance from '../../components/Balance';
 import Moviments from '../../components/Movements';
 import Actions from '../../components/Actions';
 
+
 //Lista de movimentações na conta
 
 const list = [
@@ -55,6 +56,8 @@ export default function Home() {
                 // renderizar os itens como componentes
                 renderItem={({item}) => <Moviments data={item}/>}
                 />
+                
+            
         </View>
     );
 }
