@@ -1,2 +1,2 @@
 # Mobile
-learn react native
+learn react native with managament money project
